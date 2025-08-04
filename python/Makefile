@@ -1,13 +1,13 @@
 .PHONY: componentize build-component
 
-all: build-component
+all: component
 
-componentize:
+bindings:
 	rm -rf wit_world/
 	uvx componentize-py --wit-path component.wit --world adder bindings .
 
 
-build-component:
+component:
 	uvx componentize-py \
 		--wit-path component.wit \
 		--world adder \
